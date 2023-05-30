@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: -webkit-linear-gradient(
+    to right,
+    #383CC1,
+    #fff
+  ); 
+  background: linear-gradient(to right, #383cc1, #fff);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 24px;
+}
+
+.app-form {
+  margin-top: 30px;
+}
+
+.app-input {
+  color: #000;
+  width: 400px;
+  min-width: 150px;
+  padding: 7px 15px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  background: transparent;
+}
+
+.app-input::placeholder {
+  color: #000;
+}
+
+.app-submit {
+  color: #000;
+  border: 2px solid #000;
+  background: transparent;
+  padding: 5px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-left: 15px;
+  font-size: 1.2rem;
+}
+
+.app-poke-container {
+  margin-top: 50px;
+  padding: 15px;
+}
+
+@media (max-width: 768px) {
+  .app-meal-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-poke-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .app-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .app-input {
+    width: 100%;
+  }
+}
